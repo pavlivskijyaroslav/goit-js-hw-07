@@ -7,12 +7,12 @@ regForm.addEventListener('submit', (e) => {
 
   if (emailValue === '' || passValue === '') {
     alert('All form fields must be filled in');
+  } else {
+    const objForm = {
+      email: emailValue.trim(),
+      password: passValue.trim(),
+    };
+    console.log(objForm);
+    form.reset();
   }
-  const objForm = {
-    email: emailValue.trim(),
-    password: passValue.trim(),
-  };
-
-  console.log(objForm);
-  form.reset();
 });
